@@ -6,9 +6,9 @@ services:
       context: .
       args:
         PWA_ENABLED: "true"
-        TMDB_READ_API_KEY: "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZjlhYjJiYzY3OTVlYjhjYWM0N2Q2NjlhZGFkODQxMiIsIm5iZiI6MTcyMDk3MjE4Mi45MjMzMywic3ViIjoiNjY5M2YyODQxZmViOTg0NmY3ODk2M2EzIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.UBbfw4-6kHCwKCiBIRdFOvfz-vazcIPg9u_KF9Q-QFo"
-        CORS_PROXY_URL: "https://sudo-prox.rapidfuge.xyz"
-        BACKEND_URL: "https://sudo-backend.rapidfuge.xyz"
+        TMDB_READ_API_KEY: ""
+        CORS_PROXY_URL: ""
+        BACKEND_URL: ""
     ports:
-      - "5173:5173"
+      - "80:80"
     restart: unless-stopped
