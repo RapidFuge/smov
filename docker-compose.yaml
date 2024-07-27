@@ -1,26 +1,14 @@
 version: "3.8"
 
 services:
-
   movieweb:
     build:
       context: .
-      # args:
-      #   PWA_ENABLED: "false"
-      #   GA_ID: ""
-      #   APP_DOMAIN: ""
-      #   OPENSEARCH_ENABLED: "false"
-      #   TMDB_READ_API_KEY: ""
-      #   CORS_PROXY_URL: ""
-      #   DMCA_EMAIL: ""
-      #   NORMAL_ROUTER: "false"
-      #   BACKEND_URL: ""
-      #   HAS_ONBOARDING: "false"
-      #   ONBOARDING_CHROME_EXTENSION_INSTALL_LINK: ""
-      #   ONBOARDING_PROXY_INSTALL_LINK: ""
-      #   DISALLOWED_IDS: ""
-      #   CDN_REPLACEMENTS: ""
-      #   TURNSTILE_KEY: ""
+      args:
+        PWA_ENABLED: "true"
+        TMDB_READ_API_KEY: "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZjlhYjJiYzY3OTVlYjhjYWM0N2Q2NjlhZGFkODQxMiIsIm5iZiI6MTcyMDk3MjE4Mi45MjMzMywic3ViIjoiNjY5M2YyODQxZmViOTg0NmY3ODk2M2EzIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.UBbfw4-6kHCwKCiBIRdFOvfz-vazcIPg9u_KF9Q-QFo"
+        CORS_PROXY_URL: "https://sudo-prox.rapidfuge.xyz"
+        BACKEND_URL: "https://sudo-backend.rapidfuge.xyz"
     ports:
-      - "80:80"
+      - "5173:5173"
     restart: unless-stopped

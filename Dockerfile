@@ -43,10 +43,12 @@ ENV VITE_TURNSTILE_KEY=${TURNSTILE_KEY}
 ENV VITE_ALLOW_AUTOPLAY=${ALLOW_AUTOPLAY}
 
 COPY . ./
-RUN pnpm run build
+EXPOSE 5173
+CMD ["npm", "run", "dev", "--",  "--host"]
+# RUN pnpm run build
 
 # production environment
-FROM nginx:stable-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# FROM nginx:stable-alpine
+# COPY --from=build /app/dist /usr/share/nginx/html
+# EXPOSE 80
+# CMD ["nginx", "-g", "daemon off;"]
